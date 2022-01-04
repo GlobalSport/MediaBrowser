@@ -13,13 +13,16 @@ let package = Package(
             name: "MediaBrowser",
             targets: ["MediaBrowser"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(name:"SDWebImage", url: "https://github.com/SDWebImage/SDWebImage",.exact(Version("5.12.2"))),
+    .package(name:"UICircularProgressRing", url: "https://github.com/luispadron/UICircularProgressRing",.exact(Version("8.0.0"))),
+             ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "MediaBrowser",
-            dependencies: [],
+            dependencies: ["SDWebImage", "UICircularProgressRing"],
             resources: [.copy("Sources/MediaBrowser/MediaBrowser.xcassets")]
         )
     ]
