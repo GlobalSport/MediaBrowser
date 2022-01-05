@@ -106,7 +106,7 @@ public protocol MediaBrowserDelegate: AnyObject {
     func accessToken(for url: URL?) -> String?
 }
 
-public extension MediaBrowserDelegate {
+public extension MediaBrowserDelegate where Self: UIViewController {
     func mediaBrowserDidFinishModalPresentation(mediaBrowser: MediaBrowser) {
         mediaBrowser.dismiss(animated: true, completion: nil)
     }
