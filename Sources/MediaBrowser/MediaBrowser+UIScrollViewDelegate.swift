@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension MediaBrowser: UIScrollViewDelegate {
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if !viewIsActive || performingLayout || rotating {

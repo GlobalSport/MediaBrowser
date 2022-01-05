@@ -8,7 +8,7 @@
 //
 
 import Foundation
-
+import UIKit
 class MediaTapDetectingImageView: UIImageView {
     weak var tapDelegate: TapDetectingImageViewDelegate?
     

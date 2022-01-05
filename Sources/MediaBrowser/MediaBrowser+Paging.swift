@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 extension MediaBrowser {
     /**
      setCurrentIndex to show first.
